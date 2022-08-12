@@ -220,7 +220,7 @@ var searchStaff = function () {
   tuKhoa = removeVietnameseTones(tuKhoa);
   var output = [];
   for (var index = 0; index < staffList.length; index++) {
-    var xepLoai = removeVietnameseTones(staffList[index].level);
+    var xepLoai = removeVietnameseTones(staffList[index].calcLevel());
     if (xepLoai.search(tuKhoa) != -1 || staffList[index].id == tuKhoa) {
       output.push(staffList[index]);
     }
