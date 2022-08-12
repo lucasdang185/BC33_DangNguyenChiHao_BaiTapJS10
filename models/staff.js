@@ -38,11 +38,4 @@ function NhanVien(id, name, email, pass, day, salary, level, workTime) {
 
   }
 }
-var staffID = document.querySelector("#tknv").value;
-var staffName = document.querySelector("#name").value;
-var staffEmail = document.querySelector("#email").value;
-var staffPass = document.querySelector("#password").value;
-var staffDay = document.querySelector("#datepicker").value;
-var staffSalary = document.querySelector("#luongCB").value;
-var staffLevel = document.querySelector("#chucvu").value;
-var staffWorkTime = document.querySelector("#gioLam").value;
+
