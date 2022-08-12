@@ -288,8 +288,8 @@
 
 				<!-- Modal footer -->
 				<div class="modal-footer" id="modal-footer">
-					<button id="btnThemNV" type="button" class="btn btn-success">Thêm người dùng</button>
-					<button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button>
+					<button id="btnThemNV" type="button" class="btn btn-success" onclick="createStaff()">Thêm người dùng</button>
+					<button id="btnCapNhat" type="button" class="btn btn-success" onclick="updateStaff">Cập nhật</button>
 					<button id="btnDong" type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
 				</div>
 
@@ -324,6 +324,19 @@
 			});
 		});
 	</script>
+
+	<!-- axios: dung de them du lieu den sever hoac file -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	 
+	<!-- models -->
+	<script src="./models/staff.js"></script>
+	<script src="./models/validation.js"></script>
+	<!-- models -->
+
+	<!-- controllers -->
+	<script src="./controllers/index.js"></script>
+	<!-- controllers -->
 </body>
 
 </html>
