@@ -104,10 +104,11 @@ function renderStaffList(arrNV) {
            <td>
              <button class="btn btn-danger"  onclick="deleteStaff('${
                obNhanVien.id
-             }')">Del</button>
-             <button class="btn btn-primary" onclick="editStaff('${
+             }')">Xóa</button>
+             <button class="btn btn-primary" data-toggle="modal"
+             data-target="#myModal" onclick="editStaff('${
                obNhanVien.id
-             }')">Update</button>
+             }')">Sửa</button>
            </td>
          </tr>
        `;
@@ -163,11 +164,11 @@ function updateStaff() {
   nvUpdate.id = document.querySelector("#tknv").value;
   nvUpdate.name = document.querySelector("#name").value;
   nvUpdate.email = document.querySelector("#email").value;
-  nvUpdate.dob = document.querySelector("#password").value;
-  nvUpdate.course = document.querySelector("#datepicker").value;
-  nvUpdate.physic = document.querySelector("#luongCB").value;
-  nvUpdate.chemistry = document.querySelector("#chucvu").value;
-  nvUpdate.math = document.querySelector("#gioLam").value;
+  nvUpdate.pass = document.querySelector("#password").value;
+  nvUpdate.day = document.querySelector("#datepicker").value;
+  nvUpdate.salary = document.querySelector("#luongCB").value;
+  nvUpdate.level = document.querySelector("#chucvu").value;
+  nvUpdate.workTime = document.querySelector("#gioLam").value;
   console.log(nvUpdate);
 
   let indexEdit = -1;
@@ -184,7 +185,9 @@ function updateStaff() {
     staffList[indexEdit].level = nvUpdate.level;
     staffList[indexEdit].workTime = nvUpdate.workTime;
     //Gọi hàm rendertable truyền cho hàm mảng mới
-    renderStaffList(studentList);
+    renderStaffList(staffList);
+
+
   }
 }
 
